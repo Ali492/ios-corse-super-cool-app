@@ -10,8 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var helo_world: UIImageView!
+    @IBOutlet weak var collBg:UIImageView!
+    @IBOutlet weak var uncoll: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        helo_world.hidden=true
+        collBg.hidden=true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +27,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func makeMeSoUnCool(sender: AnyObject) {
+    
+        helo_world.hidden=false
+        collBg.hidden=false
+        uncoll.hidden=true
+    }
 
 }
 
